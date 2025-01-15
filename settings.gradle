@@ -1,0 +1,17 @@
+rootProject.name = 'gateway-ext-gradle-demo'
+
+dependencyResolutionManagement {
+	repositories {
+		mavenCentral()
+		maven {
+			url "${settings.broadcomJFrogArtifactoryHost}/artifactory/spring-scg-extensions-gradle-dev-local"
+			content {
+				includeGroupByRegex "com.vmware.tanzu.*"
+			}
+			credentials {
+				username = System.getenv('BROADCOM_JFROG_ARTIFACTORY_USERNAME') ?: settings.broadcomJFrogArtifactoryUsername
+				password = System.getenv('BROADCOM_JFROG_ARTIFACTORY_PASSWORD') ?: settings.broadcomJFrogArtifactoryPassword
+			}
+		}
+	}
+}
