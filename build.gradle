@@ -1,7 +1,7 @@
 plugins {
 	id 'java'
-	id 'org.springframework.boot' version '3.2.12'
-	id 'io.spring.dependency-management' version '1.1.6'
+	id 'org.springframework.boot' version '3.4.2'
+	id 'io.spring.dependency-management' version '1.1.7'
 }
 
 group = 'com.example.gateway.gradle'
@@ -14,8 +14,8 @@ java {
 }
 
 ext {
-	set('springCloudVersion', "2023.0.5")
-	set('extensionsVersion', "0.5.0-SNAPSHOT")
+	set('springCloudVersion', "2024.0.0")
+	set('extensionsVersion', "0.6.0-SNAPSHOT")
 }
 
 dependencies {
