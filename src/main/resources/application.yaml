@@ -37,4 +37,4 @@ management:
     port: 8090
   endpoint:
     gateway:
-      enabled: true
+      access: unrestricted
